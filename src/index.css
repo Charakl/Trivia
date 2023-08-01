@@ -1,0 +1,64 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+
+
+/* input[type='radio']:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -3px;
+  left: -1px;
+  position: relative;
+  background-color: #d1d3d1;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+input[type='radio']:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -3px;
+  left: -1px;
+  position: relative;
+  background-color: #ffa500;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+} */
+
+input[type="checkbox"].form-radio {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 1.25rem;
+  width: 1.25rem;
+  border-radius: 50%;
+  border: 3px solid #CBD5E0;
+  outline: none;
+  transition-duration: 0.2s;
+  padding: 10px;
+  position: relative;
+  top: 5px;
+  left: 0;
+}
+
+/* Custom checkmark when selected */
+input[type="checkbox"].form-radio:checked {
+  border-color: black;
+  
+}
+
