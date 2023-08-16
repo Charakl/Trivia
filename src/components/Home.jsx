@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Categories from './Categories';
 import Time from './Time';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
   const teams = ['2', '3', '4','5'];
@@ -116,6 +117,8 @@ const Home = () => {
     // console.log(teamData);
   };
 
+  const navigate = useNavigate();
+
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(teamData);
@@ -125,7 +128,7 @@ const Home = () => {
     localStorage.setItem('rounds', selectedRounds);
     localStorage.setItem('time', time);
     localStorage.setItem('categories', JSON.stringify(finalCategories));
-    
+    navigate('/game');
   }
 
   return (

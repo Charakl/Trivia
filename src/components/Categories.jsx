@@ -38,9 +38,13 @@ const Categories = ({ updateCategs }) => {
     };
 
     useEffect(() => {
+        // This will be triggered after every state update
+        
         console.log('Variable in child changed:', categories);
         updateCategs(categories);
       }, [categories]);
+    
+
     return (
         <div>
             <h2 className='mt-5 mb-2'>Choose Categories</h2>
