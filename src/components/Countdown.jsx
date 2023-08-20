@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
-const Countdown = () => {
-    const [countdown, setCountdown] = useState(15);
+const Countdown = (props) => {
+    const [countdown, setCountdown] = useState(props.time);
     const [isPaused, setIsPaused] = useState(false);
     const [smallerThanTen, setSmallerThanTen] = useState(false);
 

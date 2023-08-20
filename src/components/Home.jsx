@@ -31,8 +31,8 @@ const Home = () => {
   const colors = ['blue', 'red', 'green', 'orange', 'yellow', 'purple', 'pink'];
 
 
-  const [teamData, setTeamData] = useState([{ name: '', color: '' },
-  { name: '', color: '' }]);
+  const [teamData, setTeamData] = useState([{ name: '', color: '', points: 0},
+  { name: '', color: '', points: 0 }]);
 
   const [time, setTime] = useState('');
 
@@ -73,7 +73,7 @@ const Home = () => {
       if (num > prevTeamData.length) {
         console.log(prevTeamData);
         console.log(num - prevTeamData.length);
-        const emptyTeamsToAdd = Array(num - prevTeamData.length).fill({ name: '', color: '' });
+        const emptyTeamsToAdd = Array(num - prevTeamData.length).fill({ name: '', color: '', points: 0 });
         console.log(emptyTeamsToAdd);
         return [...prevTeamData, ...emptyTeamsToAdd];
       }

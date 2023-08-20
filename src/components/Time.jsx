@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 
 const Time = ({ updateTime}) => {
 
-    const minutes = ['1', '2', '3'];
-    const [selectedTime, setselectedTime] = useState(minutes[0]);
+    const seconds = ['30', '60', '90'];
+    const [selectedTime, setselectedTime] = useState(seconds[0]);
 
     const handleTimeChange = (event) => {
         setselectedTime(event.target.value);
@@ -19,16 +19,16 @@ const Time = ({ updateTime}) => {
     return (
         <div>
             <h2 className='mt-5 mb-2'>How much time ?</h2>
-            {minutes.map((minute, index) =>(
+            {seconds.map((second, index) =>(
                 <label key={index} className='mr-10'>
                     <input
                         type="radio"
-                        value={minute}
-                        checked={selectedTime === minute}
+                        value={second}
+                        checked={selectedTime === second}
                         onChange={handleTimeChange}
                         className='options-radio'
                     />
-                    {minute}{minute === '1' ? 'min' : 'mins'}
+                    {second}secs
                 </label>
             ))}
         </div>
